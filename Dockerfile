@@ -1,11 +1,12 @@
-FROM python:3.12
-
-WORKDIR /app
-
-COPY . .
+FROM ubuntu
 
 RUN apt update
 RUN  pip install -r requirements.txt
 RUN pip install flask
 
-CMD ["python","run.py"]
+
+WORKDIR /app
+
+COPY . .
+
+CMD ["python3","-m","flask","app","--host=0.0.0.0"]
