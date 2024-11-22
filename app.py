@@ -78,4 +78,4 @@ if __name__ == '__main__':
     # Ensure uploads folder exists
     if not os.path.exists('uploads'):
         os.makedirs('uploads')
-    #app.run(debug=True, host='0.0.0.0', port=443)  # Change host to '0.0.0.0'
+    app.run(debug=True, host='0.0.0.0', port=443)  # Change host to '0.0.0.0'
